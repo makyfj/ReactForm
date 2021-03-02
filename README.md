@@ -1,6 +1,6 @@
 # Simple Form Validator with React
 
-- Trying out simple form validator to be understand React's concepts
+- Trying out simple form validator to better understand React's concepts
 
 # Getting Started with Create React App
 
