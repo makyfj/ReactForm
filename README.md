@@ -2,6 +2,9 @@
 
 - Trying out simple form validator to better understand React's concepts
 
+  ![alt website-1](https://github.com/makyfj/ReactForm/blob/main/public/form1.png?raw=true)
+  ![alt website-2](https://github.com/makyfj/ReactForm/blob/main/public/form2.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
