@@ -1,0 +1,44 @@
+.App {
+  padding: 0px 8px;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+.errors {
+  color: red;
+}
+
+.displayForm {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.displayForm label {
+  padding: 12px 12px 12px 0;
+}
+
+.displayForm input {
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.displayForm button {
+  background-color: #acaf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.displayForm button:hover {
+  background-color: #45a049;
+}
