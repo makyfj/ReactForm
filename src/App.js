@@ -15,6 +15,10 @@ class App extends Component {
 
     this.validatePasswordOnBlur = this.validatePasswordOnBlur.bind(this);
     this.validateUsernameOnBlur = this.validateUsernameOnBlur.bind(this);
+    this.validateEmailOnBlur = this.validateEmailOnBlur.bind(this);
+    this.validatePasswordConfirmationOnBlur = this.validatePasswordConfirmationOnBlur.bind(
+      this
+    );
   }
 
   submitForm(event) {
@@ -52,6 +56,12 @@ class App extends Component {
     this.setState({ password, errors });
   }
 
+  validateEmailOnBlur(event) {
+    const email = event.target.value;
+    const errors = this.state.errors;
+    errors.push(this.validateEmailFormat("Email", email));
+    this.setState({ email, errors });
+  }
   validateEmailFormat(fieldName, value) {
     let [lhs, rhs] = value.split("@");
     lhs = lhs || "";
@@ -61,11 +71,14 @@ class App extends Component {
     }
   }
 
-  validateEmailOnBlur(event) {
-    const email = event.target.value;
+  validatePasswordConfirmationOnBlur(event) {
+    const passwordConfirmation = event.target.value;
     const errors = this.state.errors;
-    errors.push(this.validateEmailFormat("Email", email));
-    this.setState({ email, errors });
+    if (passwordConfirmation !== this.state.password) {
+      errors.push("Password must match password confirmation");
+    }
+
+    this.setState({ passwordConfirmation, errors });
   }
 
   displayForm() {
@@ -92,10 +105,16 @@ class App extends Component {
           type="text"
           id="passwordConfirmation"
           name="passwordConfirmation"
+          onBlur={this.validatePasswordConfirmationOnBlur}
         />
         <br />
         <label htmlFor="email">Email: </label>
-        <input type="text" id="email" name="email" />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          onBlur={this.validateEmailOnBlur}
+        />
         <br />
         <button type="submit" onClick={this.submitForm}>
           Submit
