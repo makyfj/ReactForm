@@ -1,3 +1,7 @@
+# Simple Form Validator with React
+
+- Trying out simple form validator to be understand React's concepts
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
